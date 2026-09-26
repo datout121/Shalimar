@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Le Shalimar - Restaurant Indien à Valence</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffaf2;
+    color: #29150d;
+}
+
+/* NAVIGATION */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(25,12,6,0.95);
+    padding: 18px;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e5a72b;
+}
+
+/* ACCUEIL */
+.hero {
+    height: 100vh;
+    min-height: 600px;
+
+    /*
+    PHOTO À METTRE :
+    photo de l'extérieur / entrée du restaurant
+    */
+
+    background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.55)),
+        url("PHOTO-EXTERIEUR.jpg") center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 80px;
+    letter-spacing: 8px;
+    text-shadow: 0 4px 15px black;
+}
+
+.hero p {
+    color: white;
+    font-size: 25px;
+    margin: 20px 0 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #d99725;
+    color: white;
+    padding: 16px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #b87812;
+}
+
+/* SECTIONS */
+section {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 42px;
+    color: #7b2814;
+    margin-bottom: 25px;
+}
+
+.description {
+    max-width: 850px;
+    margin: auto;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+/* PHOTO INTERIEUR */
+.photo-interieur {
+    width: 100%;
+    max-width: 1000px;
+    height: 450px;
+    margin: 45px auto;
+
+    /*
+    PHOTO À METTRE :
+    vraie photo de l'intérieur
+    */
+
+    background:
+        url("PHOTO-INTERIEUR.jpg") center/cover no-repeat;
+
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+}
+
+/* PLATS */
+.plats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.plat {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 7px 20px rgba(0,0,0,.15);
+    transition: .3s;
+}
+
+.plat:hover {
+    transform: translateY(-7px);
+}
+
+.plat-photo {
+    height: 230px;
+    background-size: cover;
+    background-position: center;
+}
+
+.photo1 {
+    background-image: url("PHOTO-PLAT-1.jpg");
+}
+
+.photo2 {
+    background-image: url("PHOTO-PLAT-2.jpg");
+}
+
+.photo3 {
+    background-image: url("PHOTO-PLAT-3.jpg");
+}
+
+.photo4 {
+    background-image: url("PHOTO-PLAT-4.jpg");
+}
+
+.plat-info {
+    padding: 22px;
+}
+
+.plat h3 {
+    color: #7b2814;
+    margin-bottom: 10px;
+}
+
+.prix {
+    color: #c47b13;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+/* CONTACT */
+.contact {
+    background: #241109;
+    color: white;
+}
+
+.contact h2 {
+    color: #e5a72b;
+}
+
+.contact p {
+    margin: 12px;
+    font-size: 19px;
+}
+
+/* FOOTER */
+footer {
+    background: #100703;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* MOBILE */
+@media(max-width:600px) {
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 19px;
+    }
+
+    nav a {
+        margin: 0 6px;
+        font-size: 13px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#restaurant">Restaurant</a>
+    <a href="#plats">Plats</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- ACCUEIL -->
+<section class="hero" id="accueil">
+
+    <div>
+        <h1>SHALIMAR</h1>
+
+        <p>Restaurant Indien à Valence</p>
+
+        <a href="#plats" class="btn">
+            Découvrir nos plats
+        </a>
+    </div>
+
+</section>
+
+<!-- RESTAURANT -->
+<section id="restaurant">
+
+    <h2>Bienvenue chez Shalimar</h2>
+
+    <p class="description">
+        Découvrez Le Shalimar, restaurant indien situé au
+        <strong>6 Place Saint-Jean, 26000 Valence</strong>.
+        Venez découvrir une cuisine indienne riche en parfums
+        et en saveurs, avec des spécialités traditionnelles
+        préparées avec soin.
+    </p>
+
+    <div class="photo-interieur"></div>
+
+    <p class="description">
+        Une salle chaleureuse, une terrasse et des spécialités
+        indiennes à déguster sur place ou à emporter.
+    </p>
+
+</section>
+
+<!-- PLATS -->
+<section id="plats">
+
+    <h2>Nos spécialités</h2>
+
+    <p class="description">
+        Découvrez quelques spécialités proposées par Le Shalimar.
+    </p>
+
+    <div class="plats">
+
+        <div class="plat">
+            <div class="plat-photo photo1"></div>
+
+            <div class="plat-info">
+                <h3>Agneau Masala</h3>
+                <p>Agneau au curry et aux épices traditionnelles.</p>
+                <div class="prix">13 €</div>
+            </div>
+        </div>
+
+        <div class="plat">
+            <div class="plat-photo photo2"></div>
+
+            <div class="plat-info">
+                <h3>Agneau Shahi Korma</h3>
+                <p>
+                    Curry d'agneau à la crème,
+                    noix de cajou et fruits secs.
+                </p>
+                <div class="prix">14,50 €</div>
+            </div>
+        </div>
+
+        <div class="plat">
+            <div class="plat-photo photo3"></div>
+
+            <div class="plat-info">
+                <h3>Agneau Palak</h3>
+                <p>
+                    Agneau au curry avec épinards
+                    et tomates fraîches.
+                </p>
+                <div class="prix">14 €</div>
+            </div>
+        </div>
+
+        <div class="plat">
+            <div class="plat-photo photo4"></div>
+
+            <div class="plat-info">
+                <h3>Thali Express</h3>
+                <p>
+                    Une sélection de spécialités indiennes
+                    servies dans un menu complet.
+                </p>
+                <div class="prix">16 €</div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <h2>Nous contacter</h2>
+
+    <p>📍 6 Place Saint-Jean, 26000 Valence</p>
+
+    <p>📞 09 70 35 17 74</p>
+
+    <br>
+
+    <a
+        href="tel:0970351774"
+        class="btn">
+        📞 Appeler le restaurant
+    </a>
+
+</section>
+
+<footer>
+    © 2026 Le Shalimar — Restaurant Indien à Valence
+</footer>
+
+</body>
+</html>
